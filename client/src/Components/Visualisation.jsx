@@ -39,7 +39,7 @@ const rows=[
         {variable:'z' ,value: '32, 24, 423, 1234, 3242'}
     ]
 ] 
-const Visualisatin = () => {
+const Visualisation = () => {
     const [index,setIndex] = React.useState(0);
 
     const onNext = () =>{
@@ -89,4 +89,4 @@ const Visualisatin = () => {
     )
 }
 
-export default Visualisatin
+export default Visualisation

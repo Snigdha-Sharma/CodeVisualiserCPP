@@ -1,7 +1,7 @@
 import React from "react";
 import Grid from '@mui/material/Grid';
 import InputCode from "./Components/InputCode";
-import Visualisatin from "./Components/Visualisatin";
+import Visualisation from "./Components/Visualisation";
 
 
 
@@ -23,7 +23,7 @@ const App = () =>{
 
                 </Grid>
                 <Grid item xs={6}>
-                    <Visualisatin/>
+                    <Visualisation/>
                 </Grid>
                 
             </Grid>
