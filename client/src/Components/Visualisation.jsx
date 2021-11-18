@@ -41,13 +41,31 @@ const rows=[
 ] 
 const Visualisation = () => {
     const [index,setIndex] = React.useState(0);
-
+    const [isFirst,setIsFirst]= React.useState(true);
+    const [isLast,setIsLast]= React.useState(false);
     const onNext = () =>{
         setIndex(index+1)
+        if(index > -1){
+            setIsFirst(false)
+        }
+        // console.log(index)
+        if(index === rows.length-2){
+            setIsLast(true)
+            // console.log('hello')
+        }
     }
 
     const onPrev = () =>{
         setIndex(index-1)
+        // console.log(index+'llll')
+        if(index === rows.length -1)
+        {
+            setIsLast(false)
+        }
+        if(index=== 1)
+        {
+            setIsFirst(true)
+        }
     }
 
     return (
@@ -82,8 +100,8 @@ const Visualisation = () => {
 
 
             <ButtonGroup variant="contained" aria-label="outlined primary button group">
-                <Button onClick={onPrev}  >Previous Line</Button>
-                <Button onClick={onNext} >Next Line</Button>
+                <Button onClick={onPrev} disabled={isFirst}>Previous Line</Button>
+                <Button onClick={onNext} disabled={isLast}>Next Line</Button>
             </ButtonGroup>
         </div>
     )
