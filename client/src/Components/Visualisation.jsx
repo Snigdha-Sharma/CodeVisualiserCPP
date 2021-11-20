@@ -9,6 +9,7 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
+import { Typography } from '@mui/material';
 
 
 
@@ -34,7 +35,7 @@ const rows=[
         {variable:'y' ,value: 1}
     ],
     [
-        {variable:'x' ,value: 10},
+        {variable:'x' ,value: 'false'},
         {variable:'y' ,value: 12},
         {variable:'z' ,value: '32, 24, 423, 1234, 3242'}
     ]
@@ -71,7 +72,7 @@ const Visualisation = () => {
     return (
         <div>
             <Item>visualistaion</Item>
-
+            <Item>
             <TableContainer component={Paper}>
                 <Table sx={{ minWidth: 650 }} aria-label="simple table">
                     <TableHead>
@@ -96,7 +97,9 @@ const Visualisation = () => {
                     </TableBody>
                 </Table>
             </TableContainer>
-
+            <br/>
+            <Typography variant="h6" >On Line {index+1} of {rows.length}</Typography>
+            </Item>
 
 
             <ButtonGroup variant="contained" aria-label="outlined primary button group">
