@@ -1,0 +1,338 @@
+Temporary breakpoint 1 at 0x11a9: file strings.cpp, line 4.
+Starting program: /home/adams/Desktop/MajorProject/backend/string 
+
+Temporary breakpoint 1, main () at strings.cpp:4
+4	int main() {
+step #1
+5	char str[] = "abbbhg";
+str = "\340\377\377\377\177\000"
+n = 21845
+index = 0
+step #2
+6	int n = sizeof(str)/sizeof(str[0]);
+str = "abbbhg"
+n = 21845
+index = 0
+step #3
+7	int index=0;
+str = "abbbhg"
+n = 7
+index = 0
+step #4
+8	for(int i=0; i<n; i++)
+i = 0
+str = "abbbhg"
+n = 7
+index = 0
+step #5
+12	for(j=0; j<i; j++)
+j = 1431654592
+a = 0 '\000'
+b = 0 '\000'
+i = 0
+str = "abbbhg"
+n = 7
+index = 0
+step #6
+19	if(j==i)
+j = 0
+a = 0 '\000'
+b = 0 '\000'
+i = 0
+str = "abbbhg"
+n = 7
+index = 0
+step #7
+20	str[index++] = str[i];
+j = 0
+a = 0 '\000'
+b = 0 '\000'
+i = 0
+str = "abbbhg"
+n = 7
+index = 0
+step #8
+8	for(int i=0; i<n; i++)
+i = 0
+str = "abbbhg"
+n = 7
+index = 1
+step #9
+12	for(j=0; j<i; j++)
+j = 0
+a = 0 '\000'
+b = 0 '\000'
+i = 1
+str = "abbbhg"
+n = 7
+index = 1
+step #10
+14	a = str[i];
+j = 0
+a = 0 '\000'
+b = 0 '\000'
+i = 1
+str = "abbbhg"
+n = 7
+index = 1
+step #11
+15	b = str[j];
+j = 0
+a = 98 'b'
+b = 0 '\000'
+i = 1
+str = "abbbhg"
+n = 7
+index = 1
+step #12
+16	if(str[i]==str[j])
+j = 0
+a = 98 'b'
+b = 97 'a'
+i = 1
+str = "abbbhg"
+n = 7
+index = 1
+step #13
+12	for(j=0; j<i; j++)
+j = 0
+a = 98 'b'
+b = 97 'a'
+i = 1
+str = "abbbhg"
+n = 7
+index = 1
+step #14
+19	if(j==i)
+j = 1
+a = 98 'b'
+b = 97 'a'
+i = 1
+str = "abbbhg"
+n = 7
+index = 1
+step #15
+20	str[index++] = str[i];
+j = 1
+a = 98 'b'
+b = 97 'a'
+i = 1
+str = "abbbhg"
+n = 7
+index = 1
+step #16
+8	for(int i=0; i<n; i++)
+i = 1
+str = "abbbhg"
+n = 7
+index = 2
+step #17
+12	for(j=0; j<i; j++)
+j = 1
+a = 98 'b'
+b = 97 'a'
+i = 2
+str = "abbbhg"
+n = 7
+index = 2
+step #18
+14	a = str[i];
+j = 0
+a = 98 'b'
+b = 97 'a'
+i = 2
+str = "abbbhg"
+n = 7
+index = 2
+step #19
+15	b = str[j];
+j = 0
+a = 98 'b'
+b = 97 'a'
+i = 2
+str = "abbbhg"
+n = 7
+index = 2
+step #20
+16	if(str[i]==str[j])
+j = 0
+a = 98 'b'
+b = 97 'a'
+i = 2
+str = "abbbhg"
+n = 7
+index = 2
+step #21
+12	for(j=0; j<i; j++)
+j = 0
+a = 98 'b'
+b = 97 'a'
+i = 2
+str = "abbbhg"
+n = 7
+index = 2
+step #22
+14	a = str[i];
+j = 1
+a = 98 'b'
+b = 97 'a'
+i = 2
+str = "abbbhg"
+n = 7
+index = 2
+step #23
+15	b = str[j];
+j = 1
+a = 98 'b'
+b = 97 'a'
+i = 2
+str = "abbbhg"
+n = 7
+index = 2
+step #24
+16	if(str[i]==str[j])
+j = 1
+a = 98 'b'
+b = 98 'b'
+i = 2
+str = "abbbhg"
+n = 7
+index = 2
+step #25
+17	break;
+j = 1
+a = 98 'b'
+b = 98 'b'
+i = 2
+str = "abbbhg"
+n = 7
+index = 2
+step #26
+19	if(j==i)
+j = 1
+a = 98 'b'
+b = 98 'b'
+i = 2
+str = "abbbhg"
+n = 7
+index = 2
+step #27
+8	for(int i=0; i<n; i++)
+i = 2
+str = "abbbhg"
+n = 7
+index = 2
+step #28
+12	for(j=0; j<i; j++)
+j = 1
+a = 98 'b'
+b = 98 'b'
+i = 3
+str = "abbbhg"
+n = 7
+index = 2
+step #29
+14	a = str[i];
+j = 0
+a = 98 'b'
+b = 98 'b'
+i = 3
+str = "abbbhg"
+n = 7
+index = 2
+step #30
+15	b = str[j];
+j = 0
+a = 98 'b'
+b = 98 'b'
+i = 3
+str = "abbbhg"
+n = 7
+index = 2
+step #31
+16	if(str[i]==str[j])
+j = 0
+a = 98 'b'
+b = 97 'a'
+i = 3
+str = "abbbhg"
+n = 7
+index = 2
+step #32
+12	for(j=0; j<i; j++)
+j = 0
+a = 98 'b'
+b = 97 'a'
+i = 3
+str = "abbbhg"
+n = 7
+index = 2
+step #33
+14	a = str[i];
+j = 1
+a = 98 'b'
+b = 97 'a'
+i = 3
+str = "abbbhg"
+n = 7
+index = 2
+step #34
+15	b = str[j];
+j = 1
+a = 98 'b'
+b = 97 'a'
+i = 3
+str = "abbbhg"
+n = 7
+index = 2
+step #35
+16	if(str[i]==str[j])
+j = 1
+a = 98 'b'
+b = 98 'b'
+i = 3
+str = "abbbhg"
+n = 7
+index = 2
+step #36
+17	break;
+j = 1
+a = 98 'b'
+b = 98 'b'
+i = 3
+str = "abbbhg"
+n = 7
+index = 2
+step #37
+19	if(j==i)
+j = 1
+a = 98 'b'
+b = 98 'b'
+i = 3
+str = "abbbhg"
+n = 7
+index = 2
+step #38
+8	for(int i=0; i<n; i++)
+i = 3
+str = "abbbhg"
+n = 7
+index = 2
+step #39
+12	for(j=0; j<i; j++)
+j = 1
+a = 98 'b'
+b = 98 'b'
+i = 4
+str = "abbbhg"
+n = 7
+index = 2
+step #40
+14	a = str[i];
+j = 0
+a = 98 'b'
+b = 98 'b'
+i = 4
+str = "abbbhg"
+n = 7
+index = 2
