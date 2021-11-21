@@ -90,7 +90,7 @@ const Visualisation = ({rows}) => {
 
             <ButtonGroup variant="contained" aria-label="outlined primary button group" >
                 <Button onClick={onPrev} disabled={isFirst}>Previous Line</Button>
-                <Button onClick={onNext} disabled={isLast}>Next Line</Button>
+                <Button onClick={onNext} disabled={rows.length===1?true:isLast}>Next Line</Button>
             </ButtonGroup>
         </div>
     )
