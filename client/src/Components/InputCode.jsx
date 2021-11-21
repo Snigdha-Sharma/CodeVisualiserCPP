@@ -15,7 +15,7 @@ const Item = styled(Paper)(({ theme }) => ({
     color: theme.palette.text.secondary,
   }));
 
-const InputCode = ({value, handleChange}) => {
+const InputCode = ({value, handleChange,onClickSubmit,onClickVis}) => {
     
     return (
         <div><Item>
@@ -33,8 +33,8 @@ const InputCode = ({value, handleChange}) => {
                 </Item>
                 <ButtonGroup  variant="contained" aria-label="outlined primary button group">
                     <Button>Compile Code</Button>
-                    <Button>Visualize</Button>
-                    <Button>Submit</Button>
+                    <Button onClick={onClickVis}>Visualize</Button>
+                    <Button onClick={onClickSubmit}>Submit</Button>
                 </ButtonGroup>
                 <br/>
           <Item elevation={12} >

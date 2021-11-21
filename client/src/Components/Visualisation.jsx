@@ -21,26 +21,8 @@ const Item = styled(Paper)(({ theme }) => ({
     textAlign: 'left',
     color: theme.palette.text.secondary,
   }));
-const rows=[
-    [
-        {variable:'x' ,value: 0},
-        {variable:'y' ,value: 0}
-    ],
-    [
-        {variable:'x' ,value: 0},
-        {variable:'y' ,value: 1}
-    ],
-    [
-        {variable:'x' ,value: 10},
-        {variable:'y' ,value: 1}
-    ],
-    [
-        {variable:'x' ,value: 'false'},
-        {variable:'y' ,value: 12},
-        {variable:'z' ,value: '32, 24, 423, 1234, 3242'}
-    ]
-] 
-const Visualisation = () => {
+
+const Visualisation = ({rows}) => {
     const [index,setIndex] = React.useState(0);
     const [isFirst,setIsFirst]= React.useState(true);
     const [isLast,setIsLast]= React.useState(false);
@@ -71,7 +53,11 @@ const Visualisation = () => {
 
     return (
         <div>
-            <Item>visualistaion</Item>
+            <Item>
+                <Typography variant="h3">
+                Visualistaion
+                </Typography>
+            </Item>
             <Item>
             <TableContainer component={Paper}>
                 <Table sx={{ minWidth: 650 }} aria-label="simple table">
@@ -102,7 +88,7 @@ const Visualisation = () => {
             </Item>
 
 
-            <ButtonGroup variant="contained" aria-label="outlined primary button group">
+            <ButtonGroup variant="contained" aria-label="outlined primary button group" >
                 <Button onClick={onPrev} disabled={isFirst}>Previous Line</Button>
                 <Button onClick={onNext} disabled={isLast}>Next Line</Button>
             </ButtonGroup>
