@@ -1,0 +1,66 @@
+const express = require('express');
+const bodyParser = require('body-parser');
+const app = express();
+const jsonParser = bodyParser.json()
+const urlencodedParser = bodyParser.urlencoded({extended: false})
+const fs = require('fs');
+const functions = require('./function');
+
+app.get('/', (req, res) => {
+	var cmd_output = '';
+	var cp = commandLine("gdb -ex 'source functions.gdb' -ex start -ex step_mult -ex qquit ./string", function(err, data) {
+		console.log('Callback Called');
+		if(err) {
+			console.log(err);
+		}
+		cmd_output = Buffer.from(data).toString('utf8');
+	})
+
+	cp.on('close', function() {
+		res.send(parseData(cmd_output));
+	});
+
+});
+
+app.post('/', jsonParser, (req, res) => {
+	console.log(req.body.a);
+	fs.writeFile('temp.txt', req.body.a, function(err) {
+		if(err)
+			return console.log(err);
+	});
+	var compileFile = commandLine("gcc -g temp.c -o temp", function(err, data) {
+		console.log("Compiler Called");
+		if(err) {
+			console.log(err);
+		}
+		cmd_output = Buffer.from(data).toString('utf8');
+	})
+	compileFile.on('close', function() {
+		console.log("Compilation Complete");
+	})
+	res.send("Hello World");
+});
+
+commandLine = function(command, callback) {
+	var exec = require('child_process').exec;
+	var child_process = exec(command, function(err, stdout, stderr) {
+		if(err && err.length>1) {
+			console.log("failed to find playback");
+			callback(error("InternalError", "na", 500));
+			return;
+		} else {
+			if(stdout) {
+				callback(null, stdout);
+			}
+			if(stderr) {
+				callback(new Error("STDERR"), stderr);
+			}
+		}
+	});
+	return child_process;
+};
+
+
+app.listen(3000, () => {
+	console.log('Listening to 3000');
+});

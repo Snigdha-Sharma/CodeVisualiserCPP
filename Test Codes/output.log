@@ -1,0 +1,102 @@
+GNU gdb (Ubuntu 9.2-0ubuntu1~20.04) 9.2
+Copyright (C) 2020 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+Type "show copying" and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+    <http://www.gnu.org/software/gdb/documentation/>.
+
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from SwapNumbers...
+(gdb) start
+Temporary breakpoint 1 at 0x11a9: file SwapNumbers.cpp, line 4.
+Starting program: /home/Major Project/SwapNumbers 
+
+Temporary breakpoint 1, main () at SwapNumbers.cpp:4
+4	{
+(gdb) s[Kinfo locals
+x = 0
+y = 0
+(gdb) info locals[C[C[C[C[C[C[6Pstart[K[K[Kep
+5	    int x = 10, y = 5;
+(gdb) stepinfo locals
+x = 0
+y = 0
+(gdb) info locals[C[C[C[C[C[C[7Pstep
+8	    x = x + y; // x now becomes 15
+(gdb) stepinfo locals
+x = 10
+y = 5
+(gdb) info locals[C[C[C[C[C[C[7Pstep
+9	    y = x - y; // y becomes 10
+(gdb) stepinfo locals
+x = 15
+y = 5
+(gdb) info locals[C[C[C[C[C[C[7Pstep
+10	    x = x - y; // x becomes 5
+(gdb) stepinfo locals
+x = 15
+y = 10
+(gdb) info locals[C[C[C[C[C[C[7Pstepinfo locals[C[C[C[C[C[C[7Pstep
+11	    cout << "After Swapping: x =" << x << ", y=" << y;
+(gdb) stepinfo locals
+x = 5
+y = 10
+(gdb) info locals[C[C[C[C[C[C[7Pstep
+12	    return 0;
+(gdb) stepinfo locals
+x = 5
+y = 10
+(gdb) info locals[C[C[C[C[C[C[7Pstep
+13	}
+(gdb) stepinfo locals
+x = 5
+y = 10
+(gdb) info locals[C[C[C[C[C[C[7Pstep
+__libc_start_main (main=0x80011a9 <main()>, argc=1, argv=0x7ffffffee378, init=<optimized out>, fini=<optimized out>, rtld_fini=<optimized out>, stack_end=0x7ffffffee368) at ../csu/libc-start.c:342
+(gdb) stepinfo locals
+result = 0
+unwind_buf = {cancel_jmp_buf = {{jmp_buf = {134222480, 5920644731621767595, 134222016, 140737488282480, 0, 0, -5920644722388731477, -5920644168797619797}, mask_was_saved = 0}}, priv = {pad = {0x0, 0x0, 0x1, 
+      0x7ffffffee378}, data = {prev = 0x0, cleanup = 0x0, canceltype = 1}}}
+not_first_call = <optimized out>
+(gdb) info locals[C[C[C[C[C[C[7Pstep
+__GI_exit (status=0) at exit.c:138
+(gdb) stepinfo locals
+No locals.
+(gdb) info locals[C[C[C[C[C[C[7Pstep
+139	in exit.c
+(gdb) stepinfo locals
+No locals.
+(gdb) info locals[C[C[C[C[C[C[7Pstep
+__run_exit_handlers (status=0, listp=0x7fffff5ab718 <__exit_funcs>, run_list_atexit=run_list_atexit@entry=true, run_dtors=run_dtors@entry=true) at exit.c:40
+40	in exit.c
+(gdb) stepinfo locals
+No locals.
+(gdb) info locals[C[C[C[C[C[C[7Pstep
+45	in exit.c
+(gdb) stepinfo locals
+No locals.
+(gdb) info locals[C[C[C[C[C[C[7Pstep
+46	in exit.c
+(gdb) stepinfo locals
+No locals.
+(gdb) info locals[C[C[C[C[C[C[7Pstep
+__GI___call_tls_dtors () at cxa_thread_atexit_impl.c:145
+(gdb) stepinfo locals
+No locals.
+(gdb) q
+A debugging session is active.
+
+	Inferior 1 [process 224] will be killed.
+
+Quit anyway? (y or n) y[Kn
+(gdb) continue
+Continuing.
+After Swapping: x =5, y=10[Inferior 1 (process 224) exited normally]
+(gdb) q
